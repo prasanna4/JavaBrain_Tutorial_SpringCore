@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+ http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+     
+    <bean id="triangle" class="org.javabrains.springcore.JavaBrain_21_Resource_Annotation.Triangle">
+      	<property name="pointA" ref="pointA"></property>	 
+      	<property name="pointB" ref="pointB"></property>	 
+        <property name="pointC" ref="center"></property>     	
+    </bean>
+    
+   
+    
+    <bean id="pointA" class="org.javabrains.springcore.JavaBrain_21_Resource_Annotation.Point">
+      <property name="x" value="0"></property>
+      <property name="y" value="0"></property>     		 
+    </bean>
+    
+    <bean id="pointB" class="org.javabrains.springcore.JavaBrain_21_Resource_Annotation.Point">
+      <property name="x" value="-20"></property>
+      <property name="y" value="0"></property>     		 
+    </bean>
+     
+<!--      if i write @Resource(name="pointC") -->
+<!--     <bean id="pointC" class="org.javabrains.springcore.JavaBrain_21_Resource_Annotation.Point"> -->
+<!--       <property name="x" value="10"></property> -->
+<!--       <property name="y" value="20"></property>     		  -->
+<!--     </bean> -->
+<!--     <bean id="circle" class="org.javabrains.springcore.JavaBrain_21_Resource_Annotation.Circle"> -->
+<!--     </bean> -->
+     
+     
+    <bean id="center" class="org.javabrains.springcore.JavaBrain_21_Resource_Annotation.Point">
+      <property name="x" value="-10"></property>
+      <property name="y" value="20"></property>     		 
+    </bean>
+    <bean id="circle" class="org.javabrains.springcore.JavaBrain_21_Resource_Annotation.Circle">
+    </bean>  
+    <context:annotation-config/>
+    
+</beans>
