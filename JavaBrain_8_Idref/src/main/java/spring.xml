@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd" >
+ 
+
+ <bean id="first" class="org.javabrains.springcore.JavaBrain_8_Idref.FirstBean">
+    <property name="message" value="Spring is simple."/>
+</bean>
+
+<bean id="another" class="org.javabrains.springcore.JavaBrain_8_Idref.AnotherBean">
+    <property name="amessage" >
+      <idref bean="first"/>
+    </property>
+  </bean>
+    
+</beans>
